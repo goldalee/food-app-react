@@ -3,6 +3,19 @@ import {data} from '../data/data'
 
 const Food = () => {
     const [foods, setFoods] =useState(data)
+
+    //Filter type burgers/pizza/etc
+    const filterType=(category) =>{
+        setFoods(
+            data.filter((item)=>{
+                return item.category ===category;
+            })
+        );
+    };
+
+    //Filter by price
+    const filterPrice =(price)
+
   return (
     <div className='max-w-[1640px] m-auto px-4 py-12'>
         <h1 className='text-orange-600 font-bold text-4xl text-center'>Top Rated Menu Items</h1>
